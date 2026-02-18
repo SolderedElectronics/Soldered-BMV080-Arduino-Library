@@ -5,21 +5,25 @@ on: [push]
 jobs:
   push_main:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout main branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: main
           path: .
+          token: ${{ github.token }}
 
       - run: git rm -rf .
 
       - name: Checkout dev branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: dev
           path: ./dev
+          token: ${{ github.token }}
 
       - run: sudo apt-get install tree
       - run: tree
@@ -33,10 +37,11 @@ jobs:
 
       - run: tree
 
-      - uses: EndBug/add-and-commit@v7
+      - uses: EndBug/add-and-commit@v9
         with:
           author_name: Main Push Robot
           author_email: robot@example.com
           message: "Committing dev changes"
           branch: main
           add: "examples src LICENSE README.md keywords.txt library.properties"
+          token: ${{ github.token }}
