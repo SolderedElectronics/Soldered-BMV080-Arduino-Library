@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['sdk_20copy_20the_20following_20files_20to_20this_20folder_0',['SDK copy the following files to this folder',['..//github/workspace/gh-pages/src/cortex-m0plus/README.md#autotoc_md11',1,'From the Bosch BMV080 SDK, copy the following files to this folder.'],['..//github/workspace/gh-pages/src/cortex-m33/README.md#autotoc_md13',1,'From the Bosch BMV080 SDK, copy the following files to this folder.'],['..//github/workspace/gh-pages/src/cortex-m4/README.md#autotoc_md15',1,'From the Bosch BMV080 SDK, copy the following files to this folder.'],['..//github/workspace/gh-pages/src/cortex-m4f/README.md#autotoc_md17',1,'From the Bosch BMV080 SDK, copy the following files to this folder.'],['..//github/workspace/gh-pages/src/esp32s2/README.md#autotoc_md19',1,'From the Bosch BMV080 SDK, copy the following files to this folder.'],['..//github/workspace/gh-pages/src/esp32s3/README.md#autotoc_md21',1,'From the Bosch BMV080 SDK, copy the following files to this folder.']]],
+  ['sensorserviceroutine_1',['sensorServiceRoutine',['../class_b_m_v080_core.html#ab931f3e87f0f0f5058180da8aa4cdd1c',1,'BMV080Core']]],
+  ['set_5floop_5ftask_5fstack_5fsize_2',['SET_LOOP_TASK_STACK_SIZE',['../_b_m_v080-_s_o_l_d_e_r_e_d_8h.html#a26728983f9d4ebb429829460092e833d',1,'BMV080-SOLDERED.h']]],
+  ['set_5fsensor_5fvalue_3',['set_sensor_value',['../class_b_m_v080_core.html#af32f35e06af4913817709268e2a2c9fb',1,'BMV080Core']]],
+  ['setbyteorder_4',['setByteOrder',['../class_b_m_v080_wire_bus.html#a1294717a9c71f28d82893ca9dd4541f3',1,'BMV080WireBus']]],
+  ['setdistributionid_5',['setDistributionId',['../class_b_m_v080_core.html#ad86b273cd09b84600c36c7a2cefb3bd3',1,'BMV080Core']]],
+  ['setdoobstructiondetection_6',['setDoObstructionDetection',['../class_b_m_v080_core.html#a758e8918f0650b2eacdd04957d97ddd5',1,'BMV080Core']]],
+  ['setdovibrationfiltering_7',['setDoVibrationFiltering',['../class_b_m_v080_core.html#a2465127f581869a70bcbfdf3d5c3e0b1',1,'BMV080Core']]],
+  ['setdutycyclingperiod_8',['setDutyCyclingPeriod',['../class_b_m_v080_core.html#aaa65f778544c205aa70db530b2e779cc',1,'BMV080Core']]],
+  ['setintegrationtime_9',['setIntegrationTime',['../class_b_m_v080_core.html#aa46efcb994509fa4bc84ff7c08b5cb76',1,'BMV080Core']]],
+  ['setmeasurementalgorithm_10',['setMeasurementAlgorithm',['../class_b_m_v080_core.html#a19ec32f1fdd1d3b1cb1c9e651393bd2b',1,'BMV080Core']]],
+  ['setmode_11',['setMode',['../class_b_m_v080_core.html#ac53862bee74c4fbd00e7902dbfdc7522',1,'BMV080Core']]],
+  ['setsensorvalue_12',['setSensorValue',['../class_b_m_v080_core.html#a38dc234024f9a82b0ea8249c474ce066',1,'BMV080Core']]],
+  ['setvolumetricmassdensity_13',['setVolumetricMassDensity',['../class_b_m_v080_core.html#a70ea9117040dd6feef4dece19b0c54fe',1,'BMV080Core']]],
+  ['soldered_14',['About Soldered',['../index.html#autotoc_md6',1,'']]],
+  ['soldered_20bmv080_20arduino_20library_15',['Soldered BMV080 Arduino library',['../index.html',1,'']]],
+  ['source_16',['Original source',['../index.html#autotoc_md7',1,'']]],
+  ['source_20license_17',['Open-source license',['../index.html#autotoc_md8',1,'']]],
+  ['src_2fcortex_2dm0plus_2freadme_2emd_18',['README.md',['../src_2cortex-m0plus_2_r_e_a_d_m_e_8md.html',1,'']]],
+  ['src_2fcortex_2dm33_2freadme_2emd_19',['README.md',['../src_2cortex-m33_2_r_e_a_d_m_e_8md.html',1,'']]],
+  ['src_2fcortex_2dm4_2freadme_2emd_20',['README.md',['../src_2cortex-m4_2_r_e_a_d_m_e_8md.html',1,'']]],
+  ['src_2fcortex_2dm4f_2freadme_2emd_21',['README.md',['../src_2cortex-m4f_2_r_e_a_d_m_e_8md.html',1,'']]],
+  ['src_2fesp32s2_2freadme_2emd_22',['README.md',['../src_2esp32s2_2_r_e_a_d_m_e_8md.html',1,'']]],
+  ['src_2fesp32s3_2freadme_2emd_23',['README.md',['../src_2esp32s3_2_r_e_a_d_m_e_8md.html',1,'']]]
+];

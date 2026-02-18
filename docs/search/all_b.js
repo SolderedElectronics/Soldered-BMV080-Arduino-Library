@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['open_20source_20license_0',['Open-source license',['../index.html#autotoc_md7',1,'']]],
-  ['original_20source_1',['Original source',['../index.html#autotoc_md6',1,'']]]
+  ['measurementalgorithm_0',['measurementAlgorithm',['../class_b_m_v080_core.html#a1492e2bbe97de4d59fe22b449161dc3d',1,'BMV080Core']]]
 ];

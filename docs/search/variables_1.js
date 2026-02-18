@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['begindone_0',['beginDone',['../class_easy_c.html#a2f55de657a84e73edda23dae91d30436',1,'EasyC']]]
+  ['extended_5finfo_0',['extended_info',['../structbmv080__output__t.html#a0908cc09b1914eceab619687aa9e8d9d',1,'bmv080_output_t']]]
 ];

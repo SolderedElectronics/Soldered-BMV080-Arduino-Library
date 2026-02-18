@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['readdata_0',['readData',['../class_easy_c.html#a9a3d39be50b348768bc4b5dea3dae01a',1,'EasyC']]],
-  ['readme_2emd_1',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readregister_2',['readRegister',['../class_easy_c.html#a45bd6c915c1fa0998e273f69ee2d2376',1,'EasyC']]],
-  ['repository_20contents_3',['Repository Contents',['../index.html#autotoc_md1',1,'']]]
+  ['open_0',['open',['../class_b_m_v080_core.html#a06b204984f08725df066960c217b5388',1,'BMV080Core']]],
+  ['open_20source_20license_1',['Open-source license',['../index.html#autotoc_md8',1,'']]],
+  ['original_20source_2',['Original source',['../index.html#autotoc_md7',1,'']]],
+  ['overview_3',['Product Overview',['../index.html#autotoc_md1',1,'']]]
 ];

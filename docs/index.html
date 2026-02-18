@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>16x2 easyC LCD Library: NAZIV PROIZVODA Arduino library</title>
+<title>Soldered BMV080 Library: Soldered BMV080 Arduino library</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,9 +30,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">16x2 easyC LCD Library<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Soldered BMV080 Library<span id="projectnumber">&#160;1.0.0</span>
    </div>
-   <div id="projectbrief">This is a library for the 16x2 easyC LCD Module</div>
+   <div id="projectbrief">This is a library for the Bosch BMV080 sensor</div>
   </td>
  </tr>
  </tbody>
@@ -100,57 +100,109 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">NAZIV PROIZVODA Arduino library </div></div>
+  <div class="headertitle"><div class="title">Soldered <a class="el" href="class_b_m_v080.html">BMV080</a> Arduino library </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
-<p><a href="https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/make_docs.yml"><img src="https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/make_docs.yml/badge.svg?branch=dev" alt="Make docs and publish to GitHub Pages" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/arduino_lint.yml"><img src="https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/arduino_lint.yml/badge.svg?branch=dev" alt="Arduino Library Manager Compatibility" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/attiny_test.yml"><img src="https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/attiny_test.yml/badge.svg?branch=dev" alt="ATtiny Firmware Compile Test" style="pointer-events: none;" class="inline"/></a></p>
+<p><a href="https://github.com/SolderedElectronics/Soldered-BMV080-Arduino-Library/actions/workflows/make_docs.yml"><img src="https://github.com/SolderedElectronics/Soldered-BMV080-Arduino-Library/actions/workflows/make_docs.yml/badge.svg?branch=dev" alt="Make docs and publish to GitHub Pages" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/SolderedElectronics/Soldered-BMV080-Arduino-Library/actions/workflows/arduino_lint.yml"><img src="https://github.com/SolderedElectronics/Soldered-BMV080-Arduino-Library/actions/workflows/arduino_lint.yml/badge.svg?branch=dev" alt="Arduino Library Manager Compatibility" style="pointer-events: none;" class="inline"/></a></p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadCenter"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg" alt="Product name" style="pointer-events: none;" class="inline"/>    </th></tr>
+<th class="markdownTableHeadCenter"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg" alt="Soldered BMV080 Particulate Matter Sensor Breakout" style="pointer-events: none;" class="inline"/>    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><a href="https://www.solde.red/SKU">NAZIV PROIZVODA</a>   </td></tr>
+<td class="markdownTableBodyCenter"><a href="https://www.solde.red/333373">Soldered BMV080 Particulate Matter Sensor Breakout</a>   </td></tr>
 </table>
-<p>OPIS PROIZVODA + LINK NA <a href="https://www.soldered.com/en/easyC">easyC ecosystem</a>.</p>
-<h2><a class="anchor" id="autotoc_md1"></a>
-Repository Contents</h2>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Product Overview</h1>
+<p>The <a class="el" href="class_b_m_v080.html">BMV080</a> is an ultra-compact particulate matter (PM) sensor from Bosch Sensortec that measures air quality by detecting PM1, PM2.5, and PM10 particles. This sensor uses innovative laser-based technology with integrated photodiodes to measure particle concentrations directly in free space, without requiring an intrusive fan.</p>
+<p><b>Key Features:</b></p><ul>
+<li><b>Ultra-small form factor</b>: Measures merely 4.2mm x 3.5mm x 3.1mm (W x L x H)</li>
+<li><b>Fan-less design</b>: No moving parts, making it ideal for battery-powered applications</li>
+<li><b>Multi-size particle detection</b>: Measures PM1, PM2.5, and PM10 concentrations</li>
+<li><b>I2C interface</b>: Simple communication via standard I2C protocol</li>
+<li><b>Obstruction detection</b>: Built-in detection for sensor blockage</li>
+<li><b>Configurable measurement modes</b>: Continuous or duty-cycled operation</li>
+</ul>
+<p>This Arduino library provides an easy-to-use interface for the <a class="el" href="class_b_m_v080.html">BMV080</a> sensor, allowing you to read air quality data, configure sensor parameters, and monitor sensor status with just a few simple function calls.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+⚠️Important note!</h1>
+<p>This library relies on the Bosch <a class="el" href="class_b_m_v080.html">BMV080</a> SDK, which isn't included in the library. To properly use this library it is needed to download the Bosch SDK available <a href="https://www.bosch-sensortec.com/software-tools/software/previous-sdk-bmv-080-versions/">here</a>.</p>
+<p>After downloading and extracting the Bosch <a class="el" href="class_b_m_v080.html">BMV080</a> SDK, you need to copy the required header files and precompiled static libraries to the appropriate locations in this library. The static libraries are platform-specific, so you'll need to copy the files for your target platform.</p>
+<p>From the Bosch SDK, copy the following files to the specified library locations:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Bosch SDK File   </th><th class="markdownTableHeadNone">Soldered <a class="el" href="class_b_m_v080.html">BMV080</a> Arduino Library Directory    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>api/inc/bmv080.h</code>   </td><td class="markdownTableBodyNone"><code><a class="el" href="bmv080_8h.html" title="BMV080 sensor driver functions.">src/BMV080Wrapper/bmv080.h</a></code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>api/inc/bmv080_defs.h</code>   </td><td class="markdownTableBodyNone"><code><a class="el" href="bmv080__defs_8h.html" title="BMV080 sensor driver definitions.">src/BMV080Wrapper/bmv080_defs.h</a></code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>api/lib/xtensa_esp32/xtensa_esp32_elf_gcc/release/lib_bmv080.a</code>   </td><td class="markdownTableBodyNone"><code>src/esp32/lib_bmv080.a</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>api/lib/xtensa_esp32/xtensa_esp32_elf_gcc/release/lib_postProcessor.a</code>   </td><td class="markdownTableBodyNone"><code>src/esp32/lib_postProcessor.a</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>api/lib/xtensa_esp32s2/xtensa_esp32s2_elf_gcc/release/lib_bmv080.a</code>   </td><td class="markdownTableBodyNone"><code>src/esp32s2/lib_bmv080.a</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>api/lib/xtensa_esp32s2/xtensa_esp32s2_elf_gcc/release/lib_postProcessor.a</code>   </td><td class="markdownTableBodyNone"><code>src/esp32s2/lib_postProcessor.a</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>api/lib/xtensa_esp32s3/xtensa_esp32s3_elf_gcc/release/lib_bmv080.a</code>   </td><td class="markdownTableBodyNone"><code>src/esp32s3/lib_bmv080.a</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>api/lib/xtensa_esp32s3/xtensa_esp32s3_elf_gcc/release/lib_postProcessor.a</code>   </td><td class="markdownTableBodyNone"><code>src/esp32s3/lib_postProcessor.a</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>api/lib/riscv_rv32imc/riscv_none_elf_gcc/release/lib_bmv080.a</code>   </td><td class="markdownTableBodyNone"><code>src/esp32c6/lib_bmv080.a</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>api/lib/riscv_rv32imc/riscv_none_elf_gcc/release/lib_postProcessor.a</code>   </td><td class="markdownTableBodyNone"><code>src/esp32c6/lib_postProcessor.a</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>api/lib/arm_cortex_m0plus/arm_none_eabi_gcc/release/lib_bmv080.a</code>   </td><td class="markdownTableBodyNone"><code>src/cortex-m0plus/lib_bmv080.a</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>api/lib/arm_cortex_m0plus/arm_none_eabi_gcc/release/lib_postProcessor.a</code>   </td><td class="markdownTableBodyNone"><code>src/cortex-m0plus/lib_postProcessor.a</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>api/lib/arm_cortex_m33/arm_none_eabi_gcc/release/lib_bmv080.a</code>   </td><td class="markdownTableBodyNone"><code>src/cortex-m33/lib_bmv080.a</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>api/lib/arm_cortex_m33/arm_none_eabi_gcc/release/lib_postProcessor.a</code>   </td><td class="markdownTableBodyNone"><code>src/cortex-m33/lib_postProcessor.a</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>api/lib/arm_cortex_m4/arm_none_eabi_gcc/release/lib_bmv080.a</code>   </td><td class="markdownTableBodyNone"><code>src/cortex-m4/lib_bmv080.a</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>api/lib/arm_cortex_m4/arm_none_eabi_gcc/release/lib_postProcessor.a</code>   </td><td class="markdownTableBodyNone"><code>src/cortex-m4/lib_postProcessor.a</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>api/lib/arm_cortex_m4f/arm_none_eabi_gcc/release/lib_bmv080.a</code>   </td><td class="markdownTableBodyNone"><code>src/cortex-m4f/lib_bmv080.a</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>api/lib/arm_cortex_m4f/arm_none_eabi_gcc/release/lib_postProcessor.a</code>   </td><td class="markdownTableBodyNone"><code>src/cortex-m4f/lib_postProcessor.a</code>   </td></tr>
+</table>
+<h3><a class="anchor" id="autotoc_md3"></a>
+Repository Contents</h3>
 <ul>
 <li>**/src** - source files for the library (.h &amp; .cpp)</li>
 <li>**/examples** - examples for using the library</li>
 <li>**_other_** - <em>keywords</em> file highlights function words in your IDE, <em>library.properties</em> enables implementation with Arduino Library Manager.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md2"></a>
-Hardware design</h2>
-<p>You can find hardware design for this board in <em>NAZIV PROIZVODA</em> hardware repository.</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Documentation</h2>
-<p>Access Arduino library documentation <a href="https://SolderedElectronics.github.io/Soldered-Generic-Arduino-Library/">here</a>.</p>
+<h3><a class="anchor" id="autotoc_md4"></a>
+Hardware design</h3>
+<p>You can find hardware design for this board in the Soldered <a class="el" href="class_b_m_v080.html">BMV080</a> Particulate Matter Sensor Breakout hardware repository.</p>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Documentation</h3>
+<p>Access Arduino library documentation <a href="https://SolderedElectronics.github.io/Soldered-BMV080-Arduino-Library/">here</a>.</p>
 <ul>
 <li>Tutorial for using the NAZIV PROIZVODA board</li>
 <li>Installing an Arduino library</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Board compatibility</h2>
-<p>The library is compatible with board &amp; microcontroller families shown in green below:</p>
-<p><a href="https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/compile_test.yml"><img src="http://github-actions.40ants.com/SolderedElectronics/Soldered-Generic-Arduino-Library/matrix.svg?branch=dev&amp;only=Compile%20Sketches" alt="Compile Sketches" style="pointer-events: none;" class="inline"/></a></p>
-<h2><a class="anchor" id="autotoc_md5"></a>
-About Soldered</h2>
-<p><img src="https://raw.githubusercontent.com/SolderedElectronics/Soldered-Generic-Arduino-Library/dev/extras/Soldered-logo-color.png" alt="soldered-logo" width="500" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md6"></a>
+About Soldered</h3>
+<p><img src="https://raw.githubusercontent.com/SolderedElectronics/Soldered-BMV080-Arduino-Library/dev/extras/Soldered-logo-color.png" alt="soldered-logo" width="500" class="inline"/></p>
 <p>At Soldered, we design and manufacture a wide selection of electronic products to help you turn your ideas into acts and bring you one step closer to your final project. Our products are intented for makers and crafted in-house by our experienced team in Osijek, Croatia. We believe that sharing is a crucial element for improvement and innovation, and we work hard to stay connected with all our makers regardless of their skill or experience level. Therefore, all our products are open-source. Finally, we always have your back. If you face any problem concerning either your shopping experience or your electronics project, our team will help you deal with it, offering efficient customer service and cost-free technical support anytime. Some of those might be useful for you:</p>
 <ul>
 <li><a href="https://www.soldered.com/shop">Web Store</a></li>
 <li><a href="https://soldered.com/learn">Tutorials &amp; Projects</a></li>
 <li><a href="https://soldered.com/community">Community &amp; Technical support</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md6"></a>
-Original source</h2>
-<p>​ This library is possible thanks to original <a href="https://github.com/blemasle/arduino-mcp23017">arduino-mcp23017</a> library. Thank you, blemasle.</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
-Open-source license</h2>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Original source</h3>
+<p>​ This library is possible thanks to original <a href="https://github.com/sparkfun/SparkFun_BMV080_Arduino_Library?tab=readme-ov-file">SparkFun Air Quality PM1/PM2.5/PM10 Sensor - BMV080 (Qwiic)</a> library. Thank you, SparkFun.</p>
+<h3><a class="anchor" id="autotoc_md8"></a>
+Open-source license</h3>
 <p>Soldered invests vast amounts of time into hardware &amp; software for these products, which are all open-source. Please support future development by buying one of our products.</p>
 <p>Check license details in the LICENSE file. Long story short, use these open-source files for any purpose you want to, as long as you apply the same open-source licence to it and disclose the original source. No warranty - all designs in this repository are distributed in the hope that they will be useful, but without any warranty. They are provided "AS IS", therefore without warranty of any kind, either expressed or implied. The entire quality and performance of what you do with the contents of this repository are your responsibility. In no event, Soldered (TAVU) will be liable for your damages, losses, including any general, special, incidental or consequential damage arising out of the use or inability to use the contents of this repository.</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
-Have fun!</h1>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Have fun!</h2>
 <p>And thank you from your fellow makers at Soldered Electronics. </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
@@ -161,7 +213,7 @@ Have fun!</h1>
     <!-- id is needed for treeview function! -->
     <ul>
         <li class="footer">
-            Generated on Wed Feb 18 2026 08:49:02 for 16x2 easyC LCD Library by <a href="http://www.doxygen.org/index.html">
+            Generated on Wed Feb 18 2026 13:34:36 for Soldered BMV080 Library by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.13.2.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.

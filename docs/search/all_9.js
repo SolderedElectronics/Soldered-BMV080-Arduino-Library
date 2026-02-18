@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['library_0',['NAZIV PROIZVODA Arduino library',['../index.html',1,'']]],
-  ['license_1',['Open-source license',['../index.html#autotoc_md7',1,'']]]
+  ['kbmv800idlength_0',['kBMV800IDLength',['../class_b_m_v080_core.html#a01a7acf3f4096ce86eecebed0659b3c9',1,'BMV080Core']]]
 ];

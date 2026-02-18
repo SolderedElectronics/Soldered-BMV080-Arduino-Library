@@ -1,6 +1,8 @@
 var hierarchy =
 [
-    [ "EasyC", "class_easy_c.html", [
-      [ "Sensor", "class_sensor.html", null ]
-    ] ]
+    [ "bmv080_output_t", "structbmv080__output__t.html", null ],
+    [ "BMV080Core", "class_b_m_v080_core.html", [
+      [ "BMV080", "class_b_m_v080.html", null ]
+    ] ],
+    [ "BMV080WireBus", "class_b_m_v080_wire_bus.html", null ]
 ];

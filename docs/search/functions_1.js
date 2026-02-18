@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['easyc_0',['EasyC',['../class_easy_c.html#a2ea672a225a32eab52c2b20733fd26bd',1,'EasyC']]]
+  ['close_0',['close',['../class_b_m_v080_core.html#a32d3291b6b1975d7bac61e2b65eb16a0',1,'BMV080Core']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['err_0',['err',['../class_easy_c.html#a8b880d5daf116adde0cc436f1e4c0853',1,'EasyC']]]
+  ['kbmv800idlength_0',['kBMV800IDLength',['../class_b_m_v080_core.html#a01a7acf3f4096ce86eecebed0659b3c9',1,'BMV080Core']]]
 ];
