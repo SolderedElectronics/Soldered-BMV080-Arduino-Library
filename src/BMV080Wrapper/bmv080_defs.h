@@ -66,17 +66,17 @@
 #ifndef BMV080_DEFS_H_
 #define BMV080_DEFS_H_
 
-#include <stdint.h>
 #include <stdbool.h>
+#include <stdint.h>
 
 /*********************************************************************************************************************
-* Type definitions
-*********************************************************************************************************************/
+ * Type definitions
+ *********************************************************************************************************************/
 
 /*!
-* @brief Status codes returned by the BMV080 sensor driver.
-*/
-typedef enum 
+ * @brief Status codes returned by the BMV080 sensor driver.
+ */
+typedef enum
 {
     /* Ok ***********************************************************************************************************/
 
@@ -307,7 +307,7 @@ typedef enum
      *  Hint: Please contact BST customer support team.
      */
     E_BMV080_ERROR_SAFETY_PRECAUTION = 120,
-    /*! 211: Possible communication issue on SPI/I2C 
+    /*! 211: Possible communication issue on SPI/I2C
      *  or too many particle / obstruction events detected than can be processed by bmv080_serve_interrupt API.
      *  Hint: Please review communication or implementation of SPI / I2C interface.
      */
@@ -334,7 +334,7 @@ typedef enum
 
     /*! 303: A linked delay callback function produced an error.
      *  Hint: callback function of type bmv080_callback_delay_t does not return 0,
-     *  when it is called internally to perform a delay operation. 
+     *  when it is called internally to perform a delay operation.
      *  Please check implementation of the delay function.
      */
     E_BMV080_ERROR_CALLBACK_DELAY = 303,
@@ -343,21 +343,21 @@ typedef enum
      *  Hint: Please contact BST customer support team.
      */
     E_BMV080_ERROR_INCOMPATIBLE_SENSOR_HW = 418
-}bmv080_status_code_t;
+} bmv080_status_code_t;
 
 /*!
-* @brief Unique handle for a sensor unit.
-*/
-typedef void* bmv080_handle_t;
+ * @brief Unique handle for a sensor unit.
+ */
+typedef void *bmv080_handle_t;
 
 /*!
-* @brief Unique handle for a serial communication, i.e. the hardware connection to the sensor unit.
-*/
-typedef void* bmv080_sercom_handle_t;
+ * @brief Unique handle for a serial communication, i.e. the hardware connection to the sensor unit.
+ */
+typedef void *bmv080_sercom_handle_t;
 
 /*!
-* @brief Modes of performing a duty cycling measurement.
-*/
+ * @brief Modes of performing a duty cycling measurement.
+ */
 typedef enum
 {
     /*! 0: Mode with fixed duty cycle, ON time = integration_time and OFF time = sleep time */
@@ -365,8 +365,8 @@ typedef enum
 } bmv080_duty_cycling_mode_t;
 
 /*!
-* @brief Measurement algorithm choices.
-*/
+ * @brief Measurement algorithm choices.
+ */
 typedef enum
 {
     E_BMV080_MEASUREMENT_ALGORITHM_FAST_RESPONSE = 1,
@@ -375,13 +375,13 @@ typedef enum
 } bmv080_measurement_algorithm_t;
 
 /*!
-* @brief Placeholder structure for extended sensor output information.
-*/
+ * @brief Placeholder structure for extended sensor output information.
+ */
 struct bmv080_extended_info_s;
 
 /*!
-* @brief Output structure which is updated by bmv080_serve_interrupt when sensor output is available.
-*/
+ * @brief Output structure which is updated by bmv080_serve_interrupt when sensor output is available.
+ */
 typedef struct
 {
     /*! runtime_in_sec: estimate of the time passed since the start of the measurement, in seconds */
@@ -399,11 +399,11 @@ typedef struct
     float pm1_number_concentration;
     /*! pm10_number_concentration: PM10 value in particles/cm3 */
     float pm10_number_concentration;
-    
+
     /*! is_obstructed: flag to indicate whether the sensor is obstructed and cannot perform a valid measurement */
     bool is_obstructed;
-    /*! is_outside_measurement_range: flag to indicate whether the PM2.5 concentration is 
-     * outside the specified measurement range (0..1000 ug/m3) 
+    /*! is_outside_measurement_range: flag to indicate whether the PM2.5 concentration is
+     * outside the specified measurement range (0..1000 ug/m3)
      */
     bool is_outside_measurement_range;
     /*! reserved_0: for internal use only */
@@ -414,75 +414,76 @@ typedef struct
     float reserved_2;
     /*! extended_info: for internal use only */
     struct bmv080_extended_info_s *extended_info;
-}bmv080_output_t;
+} bmv080_output_t;
 
 /*********************************************************************************************************************
-* Callback definitions
-*********************************************************************************************************************/
+ * Callback definitions
+ *********************************************************************************************************************/
 
 /*!
-* @brief Function pointer for reading an array of _payload_length_ words of 16 bit _payload_.
-*
-* @details All data, _header_ and _payload_, is transferred as MSB first.
-*
-* @pre Both _header_ and _payload_ words are 16 bit and combined.
-*      A _payload_ is only transferred on a complete transmission of 16 bits.
-* @pre Burst transfers, i.e. reading a _header_ followed by several _payload_ elements, must be supported.
-*
-* @param[in] sercom_handle : Handle for a serial communication interface to a specific sensor unit.
-* @param[in] header : Header information for the following _payload_.
-* @param[out] payload : Payload to be read consisting of 16 bit words.
-* @param[in] payload_length : Number of _payload_ elements to be read.
-*
-* @return Zero if successful, otherwise the return value is an externally defined error code.
-*/
-typedef int8_t(*bmv080_callback_read_t)(bmv080_sercom_handle_t sercom_handle, uint16_t header, uint16_t* payload,
-    uint16_t payload_length);
+ * @brief Function pointer for reading an array of _payload_length_ words of 16 bit _payload_.
+ *
+ * @details All data, _header_ and _payload_, is transferred as MSB first.
+ *
+ * @pre Both _header_ and _payload_ words are 16 bit and combined.
+ *      A _payload_ is only transferred on a complete transmission of 16 bits.
+ * @pre Burst transfers, i.e. reading a _header_ followed by several _payload_ elements, must be supported.
+ *
+ * @param[in] sercom_handle : Handle for a serial communication interface to a specific sensor unit.
+ * @param[in] header : Header information for the following _payload_.
+ * @param[out] payload : Payload to be read consisting of 16 bit words.
+ * @param[in] payload_length : Number of _payload_ elements to be read.
+ *
+ * @return Zero if successful, otherwise the return value is an externally defined error code.
+ */
+typedef int8_t (*bmv080_callback_read_t)(bmv080_sercom_handle_t sercom_handle, uint16_t header, uint16_t *payload,
+                                         uint16_t payload_length);
 
 /*!
-* @brief Function pointer for writing an array of _payload_length_ words of 16 bit _payload_.
-*
-* @details All data, _header_ and _payload_, is transferred as MSB first.
-* 
-* @pre Both _header_ and _payload_ words are 16 bit.
-*      A _payload_ is only transferred on a complete transmission of 16 bits.
-* @pre Burst transfers, i.e. writing a _header_ followed by several _payload_ elements, must be supported.
-*
-* @param[in] sercom_handle : Handle for a serial communication interface to a specific sensor unit.
-* @param[in] header : Header information for the following _payload_.
-* @param[in] payload : Payload to be written consisting of 16 bit words.
-* @param[in] payload_length : Number of _payload_ elements to be written.
-*
-* @return Zero if successful, otherwise the return value is an externally defined error code.
-*/
-typedef int8_t(*bmv080_callback_write_t)(bmv080_sercom_handle_t sercom_handle, uint16_t header, const uint16_t* payload,
-    uint16_t payload_length);
+ * @brief Function pointer for writing an array of _payload_length_ words of 16 bit _payload_.
+ *
+ * @details All data, _header_ and _payload_, is transferred as MSB first.
+ *
+ * @pre Both _header_ and _payload_ words are 16 bit.
+ *      A _payload_ is only transferred on a complete transmission of 16 bits.
+ * @pre Burst transfers, i.e. writing a _header_ followed by several _payload_ elements, must be supported.
+ *
+ * @param[in] sercom_handle : Handle for a serial communication interface to a specific sensor unit.
+ * @param[in] header : Header information for the following _payload_.
+ * @param[in] payload : Payload to be written consisting of 16 bit words.
+ * @param[in] payload_length : Number of _payload_ elements to be written.
+ *
+ * @return Zero if successful, otherwise the return value is an externally defined error code.
+ */
+typedef int8_t (*bmv080_callback_write_t)(bmv080_sercom_handle_t sercom_handle, uint16_t header,
+                                          const uint16_t *payload, uint16_t payload_length);
 
 /*!
-* @brief Function pointer for executing a software delay operation.
-*
-* @param[in] duration_in_ms : Duration of the delay in milliseconds.
-*
-* @return Zero if successful, otherwise the return value is an externally defined error code.
-*/
-typedef int8_t(*bmv080_callback_delay_t)(uint32_t duration_in_ms);
+ * @brief Function pointer for executing a software delay operation.
+ *
+ * @param[in] duration_in_ms : Duration of the delay in milliseconds.
+ *
+ * @return Zero if successful, otherwise the return value is an externally defined error code.
+ */
+typedef int8_t (*bmv080_callback_delay_t)(uint32_t duration_in_ms);
 
 /*!
-* @brief Function pointer for getting a tick value in milliseconds (based on the host system clock). 
-*
-* @details This serves as a measure of the elapsed time since start up,
-*          .e.g uint32_t HAL_GetTick(void) of the STM32 HAL Framework or uint32_t GetTickCount(void) of the Windows API.
-*
-* @return Tick value in milliseconds
-*/
-typedef uint32_t(*bmv080_callback_tick_t)(void);
+ * @brief Function pointer for getting a tick value in milliseconds (based on the host system clock).
+ *
+ * @details This serves as a measure of the elapsed time since start up,
+ *          .e.g uint32_t HAL_GetTick(void) of the STM32 HAL Framework or uint32_t GetTickCount(void) of the Windows
+ * API.
+ *
+ * @return Tick value in milliseconds
+ */
+typedef uint32_t (*bmv080_callback_tick_t)(void);
 
 /*!
-* @brief Function pointer for handling the sensor's output information.
-*
-* @param[in] bmv080_output : Structure containing sensor output.
-* @param[inout] callback_parameters : user defined parameters to be passed to the callback function.
-*/
-typedef void(*bmv080_callback_data_ready_t)(bmv080_output_t bmv080_output, void* callback_parameters);
+ * @brief Function pointer for handling the sensor's output information.
+ *
+ * @param[in] bmv080_output : Structure containing sensor output.
+ * @param[inout] callback_parameters : user defined parameters to be passed to the callback function.
+ */
+typedef void (*bmv080_callback_data_ready_t)(bmv080_output_t bmv080_output, void *callback_parameters);
 
 #endif /* BMV080_DEFS_H_ */

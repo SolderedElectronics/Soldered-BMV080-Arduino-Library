@@ -1,23 +1,25 @@
 /**
  * @file BMV080WireBus.h
  * @brief Simple I2C bus wrapper for BMV080 using Arduino Wire library
- * 
+ *
  */
 
 #pragma once
 
 #include <Wire.h>
-#include <stdint.h>
 #include <stddef.h>
+#include <stdint.h>
 
 // Error codes for I2C bus operations
-typedef enum {
+typedef enum
+{
     wireBusOK = 0,
     wireBusFail = -1
 } wireBusError_t;
 
 // Bus type enum
-typedef enum {
+typedef enum
+{
     wireBusTypeI2C = 0
 } wireBusType_t;
 
@@ -26,7 +28,7 @@ typedef enum {
  */
 class BMV080WireBus
 {
-public:
+  public:
     /**
      * @brief Initialize the I2C bus with Wire port and address
      * @param wirePort Reference to TwoWire object (e.g., Wire)
@@ -61,12 +63,12 @@ public:
             return wireBusFail;
 
         bytesRead = 0;
-        
+
         // Register address is already shifted by callback (word address -> byte address)
         // The shifted value represents the byte address, send as MSB, LSB
         uint8_t regAddrMsb = (uint8_t)((regAddr >> 8) & 0xFF);
         uint8_t regAddrLsb = (uint8_t)(regAddr & 0xFF);
-        
+
         // Write register address (with stop condition)
         _wire->beginTransmission(_address);
         _wire->write(regAddrMsb);
@@ -77,7 +79,7 @@ public:
         // Request data (each register is 2 bytes, so length * 2 bytes total)
         uint8_t bytesToRead = length * 2;
         uint8_t bytesReceived = _wire->requestFrom(_address, bytesToRead);
-        
+
         if (bytesReceived != bytesToRead)
             return wireBusFail;
 
@@ -111,19 +113,19 @@ public:
         // The shifted value represents the byte address, send as MSB, LSB
         uint8_t regAddrMsb = (uint8_t)((regAddr >> 8) & 0xFF);
         uint8_t regAddrLsb = (uint8_t)(regAddr & 0xFF);
-        
+
         // Start transmission and write register address (MSB first)
         _wire->beginTransmission(_address);
         _wire->write(regAddrMsb);
         _wire->write(regAddrLsb);
-        
+
         // Write data (MSB first, as per BMV080 spec)
         for (uint16_t i = 0; i < length; i++)
         {
             _wire->write((uint8_t)((data[i] >> 8) & 0xFF)); // MSB
             _wire->write((uint8_t)(data[i] & 0xFF));        // LSB
         }
-        
+
         uint8_t txError = _wire->endTransmission();
         if (txError != 0)
             return wireBusFail;
@@ -151,11 +153,11 @@ public:
 
         _wire->beginTransmission(_address);
         uint8_t error = _wire->endTransmission();
-        
+
         return (error == 0) ? wireBusOK : wireBusFail;
     }
 
-private:
+  private:
     TwoWire *_wire = nullptr;
     uint8_t _address = 0;
 };

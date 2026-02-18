@@ -18,11 +18,11 @@
 
 #endif
 
-#include "BMV080Wrapper.h"
 #include "BMV080WireBus.h"
+#include "BMV080Wrapper.h"
 
-#include <cstring>
 #include <Arduino.h>
+#include <cstring>
 
 // Some communication functions used with the system. These are from the original code from
 // Bosch  - so keeping them the same. It is unclear if the library they provide depends on these
@@ -51,7 +51,7 @@
 //
 // static int8_t device_read_16bit_CB(bmv080_sercom_handle_t handle, uint16_t header, uint16_t *payload,
 int8_t BMV080Core::device_read_16bit_CB(bmv080_sercom_handle_t handle, uint16_t header, uint16_t *payload,
-                                         uint16_t payload_length)
+                                        uint16_t payload_length)
 {
     if (handle == nullptr)
         return E_COMBRIDGE_ERROR_NULLPTR;
@@ -77,7 +77,7 @@ int8_t BMV080Core::device_read_16bit_CB(bmv080_sercom_handle_t handle, uint16_t 
 // Callback for reading data-- called from the Bosch supplied library
 //
 int8_t BMV080Core::device_write_16bit_CB(bmv080_sercom_handle_t handle, uint16_t header, const uint16_t *payload,
-                                          uint16_t payload_length)
+                                         uint16_t payload_length)
 {
     if (handle == nullptr)
         return E_COMBRIDGE_ERROR_NULLPTR;
