@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['bmv080_5fduty_5fcycling_5fmode_5ft_0',['bmv080_duty_cycling_mode_t',['../bmv080__defs_8h.html#abec9248d3a867f49c03e5531add15d9a',1,'bmv080_defs.h']]],
-  ['bmv080_5fmeasurement_5falgorithm_5ft_1',['bmv080_measurement_algorithm_t',['../bmv080__defs_8h.html#adb54025c7d5f35df05910713d5c22cf8',1,'bmv080_defs.h']]],
-  ['bmv080_5fstatus_5fcode_5ft_2',['bmv080_status_code_t',['../bmv080__defs_8h.html#abb6cddddc89657e96e2c9585a85bc32c',1,'bmv080_defs.h']]]
+  ['wirebuserror_5ft_0',['wireBusError_t',['../_b_m_v080_wire_bus_8h.html#a375d4498b3cb0f293c56551bafc212b9',1,'BMV080WireBus.h']]],
+  ['wirebustype_5ft_1',['wireBusType_t',['../_b_m_v080_wire_bus_8h.html#a268c1e7b82f8e994bd2bebad8b7e2129',1,'BMV080WireBus.h']]]
 ];

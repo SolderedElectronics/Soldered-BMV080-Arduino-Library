@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['extended_5finfo_0',['extended_info',['../structbmv080__output__t.html#a0908cc09b1914eceab619687aa9e8d9d',1,'bmv080_output_t']]]
+  ['i2c_0',['i2c',['../class_b_m_v080.html#abc65a54f4cde1e1dceeaffcc50219329',1,'BMV080']]]
 ];

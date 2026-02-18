@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['library_0',['Soldered BMV080 Arduino library',['../index.html',1,'']]],
-  ['license_1',['Open-source license',['../index.html#autotoc_md8',1,'']]]
+  ['measurementalgorithm_0',['measurementAlgorithm',['../class_b_m_v080_core.html#a1492e2bbe97de4d59fe22b449161dc3d',1,'BMV080Core']]]
 ];

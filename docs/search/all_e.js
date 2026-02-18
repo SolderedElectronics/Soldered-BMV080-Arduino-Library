@@ -1,14 +1,8 @@
 var searchData=
 [
-  ['ping_0',['ping',['../class_b_m_v080_wire_bus.html#a353d817009ddcae18115195790ff295f',1,'BMV080WireBus']]],
-  ['pm1_1',['PM1',['../class_b_m_v080_core.html#a86ba4b1a8f81ef7e2f74956c77afb18c',1,'BMV080Core']]],
-  ['pm10_2',['PM10',['../class_b_m_v080_core.html#a677e0abc335bdfdf932a50cd080570ed',1,'BMV080Core']]],
-  ['pm10_5fmass_5fconcentration_3',['pm10_mass_concentration',['../structbmv080__output__t.html#a1d94f0ce30913a75932a539e8e1dd10f',1,'bmv080_output_t']]],
-  ['pm10_5fnumber_5fconcentration_4',['pm10_number_concentration',['../structbmv080__output__t.html#a355d405516fbd60c107a1a9b73b5bc00',1,'bmv080_output_t']]],
-  ['pm1_5fmass_5fconcentration_5',['pm1_mass_concentration',['../structbmv080__output__t.html#af3880835265f26156e0cec4440c17747',1,'bmv080_output_t']]],
-  ['pm1_5fnumber_5fconcentration_6',['pm1_number_concentration',['../structbmv080__output__t.html#a5079f5d195bf5fa0ca7a51932761d15a',1,'bmv080_output_t']]],
-  ['pm25_7',['PM25',['../class_b_m_v080_core.html#a17f8b66bd9419ea02b6109097b0538a0',1,'BMV080Core']]],
-  ['pm2_5f5_5fmass_5fconcentration_8',['pm2_5_mass_concentration',['../structbmv080__output__t.html#a7e7c622cca03e7f621dd7d479090fc79',1,'bmv080_output_t']]],
-  ['pm2_5f5_5fnumber_5fconcentration_9',['pm2_5_number_concentration',['../structbmv080__output__t.html#ae7159830ad8e76157bf52929091063e2',1,'bmv080_output_t']]],
-  ['product_20overview_10',['Product Overview',['../index.html#autotoc_md1',1,'']]]
+  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['readregister_1',['readRegister',['../class_b_m_v080_wire_bus.html#ac416923fdefad35bb1ae477afd6b53a9',1,'BMV080WireBus']]],
+  ['readsensor_2',['readSensor',['../class_b_m_v080_core.html#ad24eeaff34c91f956fd3e096afc5dda6',1,'BMV080Core']]],
+  ['repository_20contents_3',['Repository Contents',['../index.html#autotoc_md3',1,'']]],
+  ['reset_4',['reset',['../class_b_m_v080_core.html#a4f9a3a9887b7bccd1e0bfa2c5fbf1a3f',1,'BMV080Core']]]
 ];
